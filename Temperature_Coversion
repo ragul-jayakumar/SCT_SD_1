@@ -1,0 +1,89 @@
+```java
+import java.util.Scanner;
+
+public class TempConverter {
+
+    public static double cToF(double c) {
+        return (c * 9 / 5) + 32;
+    }
+
+    public static double cToK(double c) {
+        return c + 273.15;
+    }
+
+    public static double fToC(double f) {
+        return (f - 32) * 5 / 9;
+    }
+
+    public static double fToK(double f) {
+        return (f - 32) * 5 / 9 + 273.15;
+    }
+
+    public static double kToC(double k) {
+        return k - 273.15;
+    }
+
+    public static double kToF(double k) {
+        return (k - 273.15) * 9 / 5 + 32;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Temperature Converter");
+        System.out.println("1. C to F");
+        System.out.println("2. C to K");
+        System.out.println("3. F to C");
+        System.out.println("4. F to K");
+        System.out.println("5. K to C");
+        System.out.println("6. K to F");
+        System.out.print("Enter choice: ");
+
+        int ch = sc.nextInt();
+        double temp, ans;
+
+        switch (ch) {
+            case 1:
+                System.out.print("Enter C: ");
+                temp = sc.nextDouble();
+                ans = cToF(temp);
+                System.out.println("Result: " + ans + " F");
+                break;
+            case 2:
+                System.out.print("Enter C: ");
+                temp = sc.nextDouble();
+                ans = cToK(temp);
+                System.out.println("Result: " + ans + " K");
+                break;
+            case 3:
+                System.out.print("Enter F: ");
+                temp = sc.nextDouble();
+                ans = fToC(temp);
+                System.out.println("Result: " + ans + " C");
+                break;
+            case 4:
+                System.out.print("Enter F: ");
+                temp = sc.nextDouble();
+                ans = fToK(temp);
+                System.out.println("Result: " + ans + " K");
+                break;
+            case 5:
+                System.out.print("Enter K: ");
+                temp = sc.nextDouble();
+                ans = kToC(temp);
+                System.out.println("Result: " + ans + " C");
+                break;
+            case 6:
+                System.out.print("Enter K: ");
+                temp = sc.nextDouble();
+                ans = kToF(temp);
+                System.out.println("Result: " + ans + " F");
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
+```
